@@ -17,7 +17,7 @@ from bluelog.models import Admin
 class BaseTestCase(unittest.TestCase):
 
     def setUp(self):
-        app = create_app('testing')
+        app = create_app('bluelog')
         self.context = app.test_request_context()
         self.context.push()
         self.client = app.test_client()

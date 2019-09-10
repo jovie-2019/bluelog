@@ -29,7 +29,7 @@ def create_app(config_name=None):
     if config_name is None:
         config_name = os.getenv('FLASK_CONFIG', 'production')
 
-    app = Flask('bluelog')
+    app = Flask('testing',static_folder='./bluelog/static')
     app.config.from_object(config[config_name])
 
     register_logging(app)
